@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto Vidar – Acolhimento e Reconstrução no Luto em Goiânia</title>
+    <meta name="description" content="Instituto Vidar em Goiânia oferece apoio técnico e humanizado para a travessia do luto. Um espaço seguro para acolher a dor e reconstruir sentidos, com sensibilidade e expertise.">
+    
+    <!-- Open Graph Tags para redes sociais -->
+    <meta property="og:title" content="Instituto Vidar – Acolhimento e Reconstrução no Luto em Goiânia">
+    <meta property="og:description" content="Um espaço seguro para atravessar o luto com apoio técnico e humanidade em Goiânia, Goiás.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.institutovidar.com.br"> <!-- Substituir pela URL real -->
+    <meta property="og:image" content="https://www.institutovidar.com.br/social-share.jpg"> <!-- Substituir pela URL real de uma imagem para compartilhamento -->
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Paleta de Cores */
+            --color-off-white: #F7F4F0;
+            --color-sand-light: #EDE6DD;
+            --color-gray-warm: #D6D1CC;
+            --color-primary: #5E7568; /* Verde acinzentado profundo */
+            --color-accent-blue: #7C92A6; /* Azul céu acinzentado */
+            --color-accent-lavender: #C6C0D9; /* Lavanda suave */
+            --color-accent-terracotta: #D1B3A7; /* Terracota clara */
+            --color-text-dark: #333333;
+            --color-text-light: #F7F4F0;
+
+            /* Tipografia */
+            --font-body: 'Inter', sans-serif;
+            --font-heading: 'Playfair Display', serif;
+
+            /* Espaçamento */
+            --spacing-xs: 8px;
+            --spacing-sm: 16px;
+            --spacing-md: 24px;
+            --spacing-lg: 48px;
+            --spacing-xl: 96px;
+
+            /* Raio de borda */
+            --border-radius-sm: 4px;
+            --border-radius-md: 8px;
+            --border-radius-lg: 12px;
+            --border-radius-full: 50%;
+
+            /* Sombras */
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Reset e Base */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text-dark);
+            background-color: var(--color-off-white);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-size: 16px; /* Mínimo 16px */
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 500;
+            line-height: 1.2;
+            margin-bottom: var(--spacing-sm);
+            color: var(--color-primary);
+        }
+
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        p { margin-bottom: var(--spacing-sm); }
+
+        a {
+            color: var(--color-primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--color-accent-blue);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        /* Botões */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: var(--border-radius-lg);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            font-size: 1rem;
+            min-height: 48px; /* Botões grandes */
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: var(--color-text-light);
+            border: 2px solid var(--color-primary);
+        }
+
+        .btn-primary:hover {
+            background-color: darken(var(--color-primary), 10%);
+            border-color: darken(var(--color-primary), 10%);
+            color: var(--color-text-light);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--color-primary);
+            border: 2px solid var(--color-primary);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--color-primary);
+            color: var(--color-text-light);
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+            border: 2px solid #25D366;
+            display: inline-flex;
+            gap: var(--spacing-xs);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: darken(#25D366, 10%);
+            border-color: darken(#25D366, 10%);
+            color: white;
+        }
+
+        /* SVG Ícones básicos (para WhatsApp) */
+        .icon {
+            width: 1em;
+            height: 1em;
+            fill: currentColor;
+            vertical-align: middle;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--color-off-white);
+            padding: var(--spacing-sm) 0;
+            border-bottom: 1px solid var(--color-sand-light);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            padding: var(--spacing-xs) 0;
+        }
+
+        .logo svg {
+            display: block;
+            height: 40px; /* Altura da logo */
+            width: auto;
+        }
+
+        .contact-phone {
+            font-weight: 600;
+            color: var(--color-primary);
+            font-size: 1.1rem;
+            white-space: nowrap;
+            display: none; /* Escondido por padrão no mobile */
+        }
+
+        nav {
+            flex-grow: 1;
+            text-align: right;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            gap: var(--spacing-md);
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--color-primary);
+            padding: var(--spacing-xs) 0;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav a:hover, nav a:focus {
+            color: var(--color-accent-blue);
+            border-color: var(--color-accent-blue);
+            outline: none; /* Remover outline padrão para substituir por border-color */
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            padding: var(--spacing-xs);
+            z-index: 1100;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: var(--color-primary);
+            margin: 5px;
+            transition: all 0.3s ease;
+            border-radius: var(--border-radius-sm);
+        }
+
+        /* Mobile Nav */
+        @media (max-width: 768px) {
+            .contact-phone {
+                display: block; /* Visível no mobile */
+                width: 100%;
+                text-align: center;
+                margin-top: var(--spacing-sm);
+                order: 3; /* Para aparecer abaixo do logo no mobile */
+            }
+
+            nav {
+                display: none;
+                width: 100%;
+                order: 4;
+                background-color: var(--color-off-white);
+                position: absolute;
+                left: 0;
+                top: 100%; /* Abaixo do header */
+                box-shadow: var(--shadow-md);
+                padding: var(--spacing-md) 0;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: var(--spacing-sm);
+            }
+
+            nav a {
+                padding: var(--spacing-xs) var(--spacing-md);
+                width: 100%;
+                text-align: center;
+            }
+
+            .hamburger {
+                display: block;
+                order: 2; /* Ao lado do logo */
+            }
+
+            .hamburger.active .line1 {
+                transform: rotate(-45deg) translate(-6px, 6px);
+            }
+            .hamburger.active .line2 {
+                opacity: 0;
+            }
+            .hamburger.active .line3 {
+                transform: rotate(45deg) translate(-6px, -6px);
+            }
+        }
+
+        /* Main Content */
+        main {
+            flex-grow: 1;
+        }
+
+        section {
+            padding: var(--spacing-lg) 0;
+        }
+
+        section:nth-of-type(even) {
+            background-color: var(--color-sand-light);
+        }
+
+        section:focus-within {
+            outline: 2px solid var(--color-accent-blue); /* Foco para seções */
+            outline-offset: 4px;
+        }
+
+        /* Hero Section */
+        #hero {
+            background-image: url('PEXELS:serene path light nature subtle human connection');
+            background-size: cover;
+            background-position: center center;
+            color: var(--color-text-light);
+            text-align: center;
+            padding: var(--spacing-xl) 0;
+            position: relative;
+            min-height: 70vh; /* Mais presença de imagem */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(94, 117, 104, 0.65); /* Overlay verde acinzentado */
+            z-index: 1;
+        }
+
+        #hero .container {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        #hero h1 {
+            font-size: 3.5rem;
+            color: var(--color-text-light);
+            margin-bottom: var(--spacing-sm);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        #hero p {
+            font-size: 1.3rem;
+            margin-bottom: var(--spacing-lg);
+            color: var(--color-text-light);
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+
+        #hero .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+            justify-content: center;
+        }
+
+        #hero .btn {
+            min-width: 220px;
+        }
+
+        /* Quem Somos */
+        #quem-somos .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-lg);
+            align-items: center;
+        }
+
+        #quem-somos .image-wrapper {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        #quem-somos img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+            object-fit: cover;
+        }
+
+        #quem-somos .text-wrapper {
+            flex: 2;
+        }
+
+        #quem-somos h2 {
+            margin-bottom: var(--spacing-md);
+        }
+
+        /* Para Quem É */
+        #para-quem-e {
+            text-align: center;
+            background-color: var(--color-off-white);
+        }
+
+        #para-quem-e h2 {
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-md);
+        }
+
+        .audience-card {
+            background-color: white;
+            padding: var(--spacing-md);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .audience-card .icon-wrapper {
+            width: 80px;
+            height: 80px;
+            background-color: var(--color-accent-lavender);
+            border-radius: var(--border-radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .audience-card .icon-wrapper img {
+            width: 60%;
+            height: 60%;
+            object-fit: contain;
+            border-radius: 0; /* Override default img border-radius */
+            box-shadow: none;
+        }
+
+        .audience-card h3 {
+            color: var(--color-primary);
+            font-size: 1.3rem;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        /* Nossos Serviços */
+        #nossos-servicos {
+            text-align: center;
+            background-color: var(--color-sand-light);
+        }
+
+        #nossos-servicos h2 {
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .service-card {
+            background-color: white;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .service-card-content {
+            padding: var(--spacing-md);
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: var(--spacing-xs);
+            color: var(--color-primary);
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: var(--spacing-md);
+        }
+
+        /* Diferencial */
+        #diferencial {
+            background-color: var(--color-off-white); /* Fundo levemente contrastante, use o off-white aqui, ou um cinza mais suave se for o caso */
+            position: relative;
+            overflow: hidden;
+            padding: var(--spacing-lg) 0;
+        }
+
+        #diferencial::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('PEXELS:light through trees forest serene');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2; /* Imagem simbólica leve */
+            z-index: 0;
+        }
+
+        #diferencial .container {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        #diferencial h2 {
+            margin-bottom: var(--spacing-lg);
+            color: var(--color-primary);
+        }
+
+        .differentiators-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-md);
+        }
+
+        .differentiator-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: var(--spacing-md);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 150px;
+        }
+        
+        .differentiator-item h3 {
+            font-size: 1.2rem;
+            color: var(--color-primary);
+            margin-bottom: 0;
+        }
+
+        /* Frase Institucional */
+        #frase-institucional {
+            background-color: var(--color-gray-warm); /* Fundo suave */
+            text-align: center;
+            padding: var(--spacing-xl) 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #frase-institucional::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('PEXELS:abstract subtle texture light'); /* Imagem de apoio discreta */
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        #frase-institucional .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        #frase-institucional p {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin: 0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Atuação em Goiânia */
+        #atuacao-goiania {
+            text-align: center;
+            background-color: var(--color-off-white);
+        }
+
+        #atuacao-goiania h2 {
+            margin-bottom: var(--spacing-md);
+        }
+
+        #atuacao-goiania p {
+            max-width: 700px;
+            margin: 0 auto var(--spacing-md) auto;
+            font-size: 1.1rem;
+        }
+
+        /* Contato */
+        #contato {
+            background-color: var(--color-sand-light);
+            text-align: center;
+        }
+
+        #contato h2 {
+            margin-bottom: var(--spacing-lg);
+        }
+
+        #contato .contact-info {
+            margin-bottom: var(--spacing-lg);
+        }
+
+        #contato .contact-info p {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        #contato .contact-info .btn-whatsapp {
+            margin-top: var(--spacing-sm);
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: var(--spacing-xs);
+            font-weight: 500;
+            color: var(--color-primary);
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group textarea {
+            width: 100%;
+            padding: var(--spacing-sm);
+            border: 1px solid var(--color-gray-warm);
+            border-radius: var(--border-radius-sm);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: var(--color-text-dark);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-group input[type="text"]:focus,
+        .form-group input[type="email"]:focus,
+        .form-group input[type="tel"]:focus,
+        .form-group textarea:focus {
+            border-color: var(--color-accent-blue);
+            box-shadow: 0 0 0 3px rgba(124, 146, 166, 0.2);
+            outline: none;
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .contact-form button[type="submit"] {
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: var(--border-radius-lg);
+            font-weight: 600;
+            background-color: var(--color-primary);
+            color: var(--color-text-light);
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button[type="submit"]:hover {
+            background-color: darken(var(--color-primary), 10%);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--color-primary);
+            color: var(--color-text-light);
+            padding: var(--spacing-lg) 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer-watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 200px;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        footer .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        footer .logo {
+            margin-bottom: var(--spacing-md);
+        }
+
+        footer .logo svg text {
+            fill: var(--color-text-light);
+        }
+        footer .logo svg path {
+            fill: var(--color-accent-lavender); /* Ajustar para contraste no footer */
+            opacity: 0.8;
+        }
+
+
+        footer p {
+            font-size: 0.9rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        footer .footer-links ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: var(--spacing-sm) var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+        }
+
+        footer .footer-links a {
+            color: var(--color-text-light);
+            font-weight: 300;
+            opacity: 0.8;
+        }
+
+        footer .footer-links a:hover {
+            opacity: 1;
+            color: var(--color-accent-lavender);
+        }
+
+        /* Responsividade geral */
+        @media (min-width: 769px) {
+            #quem-somos .content-wrapper {
+                flex-direction: row;
+                text-align: left;
+            }
+            #quem-somos .image-wrapper {
+                margin-right: var(--spacing-lg);
+            }
+            #quem-somos .text-wrapper {
+                padding-right: var(--spacing-lg);
+            }
+        }
+
+        @media (max-width: 1024px) {
+            h1 { font-size: 2.8rem; }
+            h2 { font-size: 1.8rem; }
+            #hero p { font-size: 1.2rem; }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 var(--spacing-sm);
+            }
+
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            h3 { font-size: 1.3rem; }
+            p { font-size: 0.95rem; }
+
+            #hero {
+                padding: var(--spacing-lg) 0;
+                min-height: 60vh;
+            }
+            #hero h1 { font-size: 2.2rem; }
+            #hero p { font-size: 1rem; }
+            #hero .hero-buttons {
+                flex-direction: column;
+                gap: var(--spacing-sm);
+            }
+
+            #quem-somos .content-wrapper {
+                flex-direction: column;
+            }
+            #quem-somos .image-wrapper {
+                margin-right: 0;
+            }
+
+            .audience-grid, .services-grid, .differentiators-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #frase-institucional p {
+                font-size: 1.5rem;
+            }
+
+            .contact-form {
+                padding: var(--spacing-md);
+            }
+
+            footer .footer-links ul {
+                flex-direction: column;
+                gap: var(--spacing-xs);
+            }
+        }
+
+        @media (max-width: 480px) {
+            #hero h1 { font-size: 1.8rem; }
+            #hero p { font-size: 0.9rem; }
+            .btn {
+                padding: var(--spacing-xs) var(--spacing-sm);
+                font-size: 0.9rem;
+            }
+            .audience-card .icon-wrapper {
+                width: 60px;
+                height: 60px;
+            }
+            .audience-card h3 {
+                font-size: 1.1rem;
+            }
+            .service-card img {
+                height: 150px;
+            }
+            .service-card h3 {
+                font-size: 1.2rem;
+            }
+            #frase-institucional p {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Acessibilidade - Focus visible */
+        button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible {
+            outline: 2px solid var(--color-accent-blue);
+            outline-offset: 2px;
+            border-radius: var(--border-radius-sm);
+        }
+
+        .btn:focus-visible {
+            outline-offset: 4px; /* Mais proeminente para botões */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="#hero" class="logo" aria-label="Instituto Vidar - Página Inicial">
+                <svg width="160" height="40" viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="logoTitle logoDesc">
+                    <title id="logoTitle">Instituto Vidar</title>
+                    <desc id="logoDesc">Logotipo do Instituto Vidar, com as palavras "Instituto Vidar" e um pequeno símbolo de folha estilizada.</desc>
+                    <text x="0" y="18" font-family="'Playfair Display', serif" font-weight="600" font-size="16" fill="var(--color-primary)">INSTITUTO</text>
+                    <text x="0" y="36" font-family="'Playfair Display', serif" font-weight="600" font-size="22" fill="var(--color-primary)">VIDAR</text>
+                    <path d="M100 20 C105 10, 115 10, 120 20 C125 30, 115 30, 110 20 Z" fill="var(--color-accent-lavender)" opacity="0.7"/>
+                    <path d="M102 23 C107 13, 117 13, 122 23 C127 33, 117 33, 112 23 Z" fill="var(--color-accent-blue)" opacity="0.7"/>
+                </svg>
+            </a>
+            <a href="tel:+55629981601533" class="contact-phone">(62) 99816-01533</a>
+            <div class="hamburger" aria-label="Abrir menu de navegação" role="button" tabindex="0">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#quem-somos">Quem Somos</a></li>
+                    <li><a href="#para-quem-e">Para Quem É</a></li>
+                    <li><a href="#nossos-servicos">Serviços</a></li>
+                    <li><a href="#diferencial">Diferencial</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <h1>Acolher a dor. Reconstruir sentidos.</h1>
+                <p>Um espaço seguro para atravessar o luto com apoio técnico e humanidade.</p>
+                <div class="hero-buttons">
+                    <a href="#nossos-servicos" class="btn btn-secondary">Conheça nossos serviços</a>
+                    <a href="https://wa.me/55629981601533" target="_blank" class="btn btn-whatsapp">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12.04 2C7.34 2 3.58 5.76 3.58 10.46C3.58 12.08 4.01 13.62 4.79 14.96L3.11 20.25L8.52 18.6C9.74 19.34 11.09 19.72 12.04 19.72C16.74 19.72 20.5 15.96 20.5 11.26C20.5 6.56 16.74 2 12.04 2ZM17.15 15.22C16.94 15.63 16.48 15.71 15.96 15.46C15.44 15.21 14.53 14.67 14.31 14.39C14.09 14.11 13.92 14.04 13.4 14.56C12.89 15.09 12.39 15.15 12.04 15.21C11.69 15.27 11.02 15.03 10.37 14.47C9.72 13.91 9.21 13.06 8.84 12.42C8.47 11.78 8.78 11.49 9.01 11.27C9.18 11.09 9.38 10.83 9.58 10.58C9.77 10.33 9.87 10.14 9.98 9.93C10.09 9.71 10.04 9.51 9.96 9.35C9.88 9.18 9.34 7.92 9.11 7.39C8.88 6.86 8.68 6.94 8.52 6.94C8.36 6.94 8.16 6.94 7.96 6.94C7.76 6.94 7.42 7.02 7.15 7.32C6.88 7.63 6.13 8.35 6.13 9.85C6.13 11.35 7.22 12.8 7.39 13.03C7.56 13.26 9.52 16.34 12.56 17.65C15.59 18.96 15.78 18.88 16.32 18.82C16.86 18.76 17.72 18.23 17.92 17.7C18.12 17.17 18.12 16.73 18.06 16.6C18 16.48 17.36 15.39 17.15 15.22Z"/>
+                        </svg>
+                        Fale conosco no WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="quem-somos">
+            <div class="container">
+                <div class="content-wrapper">
+                    <div class="image-wrapper">
+                        <img src="https://images.pexels.com/photos/9064727/pexels-photo-9064727.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Grupo de pessoas em roda, olhando umas para as outras com empatia, representando apoio e acolhimento.">
+                    </div>
+                    <div class="text-wrapper">
+                        <h2>Quem Somos</h2>
+                        <p>O Instituto Vidar, localizado em Goiânia – Goiás, nasceu da profunda compreensão de que o luto é uma experiência humana universal, mas singular, que exige acolhimento e suporte especializados. Nossa missão é oferecer um espaço seguro e humanizado para que indivíduos, famílias e comunidades possam atravessar o processo de luto de forma consciente e apoiada.</p>
+                        <h3>Missão</h3>
+                        <p>Promover o acolhimento, a educação e o suporte técnico-emocional a pessoas enlutadas, fomentando a reconstrução de sentidos e a resiliência diante da perda.</p>
+                        <h3>Valores</h3>
+                        <p>Humanidade, Ética, Acolhimento, Respeito, Empatia, Sensibilidade, Profissionalismo e Esperança.</p>
+                        <h3>Atuação</h3>
+                        <p>Com uma equipe multidisciplinar especializada em luto, atuamos através de acompanhamento individualizado, grupos de apoio, formação profissional e projetos de conscientização, sempre com um compromisso ético inabalável e uma abordagem sensível e fundamentada.</p>
+                        <h3>Compromisso Ético</h3>
+                        <p>Nosso trabalho é pautado pelo respeito à individualidade da dor, pela confidencialidade e pela busca constante das melhores práticas no cuidado ao enlutado, evitando positividade forçada ou dramatização da dor.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="para-quem-e">
+            <div class="container">
+                <h2>Para Quem É o Instituto Vidar?</h2>
+                <div class="audience-grid">
+                    <div class="audience-card">
+                        <div class="icon-wrapper">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%235E7568'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z'/%3E%3C/svg%3E" alt="Ícone de pessoa enlutada">
+                        </div>
+                        <h3>Pessoas Enlutadas (Adultos e Crianças)</h3>
+                        <p>Oferecemos suporte individualizado e em grupo para quem enfrenta a dor da perda, incluindo crianças e adolescentes que vivenciam o luto.</p>
+                    </div>
+                    <div class="audience-card">
+                        <div class="icon-wrapper">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%235E7568'%3E%3Cpath d='M17 10h-1v-1a2 2 0 00-2-2h-4a2 2 0 00-2 2v1H7c-1.1 0-2 .9-2 2v7c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2v-7c0-1.1-.9-2-2-2zm-6-1h2v1h-2V9zm-4 4h10v5H7v-5zM9 13v2h6v-2H9z'/%3E%3C/svg%3E" alt="Ícone de família">
+                        </div>
+                        <h3>Famílias em Sofrimento Emocional</h3>
+                        <p>Apoiamos famílias que buscam entender e lidar com o impacto do luto na dinâmica familiar e nas relações interpessoais.</p>
+                    </div>
+                    <div class="audience-card">
+                        <div class="icon-wrapper">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%235E7568'%3E%3Cpath d='M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 2.18l6.82 3.03L12 18.06l-6.82-10.85L12 3.18zM11 7h2v6h-2V7z'/%3E%3C/svg%3E" alt="Ícone de livro/educação">
+                        </div>
+                        <h3>Profissionais da Saúde e Educação</h3>
+                        <p>Oferecemos formação e supervisão para que profissionais possam acolher o luto em seus contextos de atuação com mais preparo.</p>
+                    </div>
+                    <div class="audience-card">
+                        <div class="icon-wrapper">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%235E7568'%3E%3Cpath d='M12 5.9c1.16 0 2.1.94 2.1 2.1s-.94 2.1-2.1 2.1S9.9 9.16 9.9 8s.94-2.1 2.1-2.1zm0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-2.65 0-5.32-1.23-6.07-3.51.59-.44 1.25-.83 1.95-1.15 1.1-.5 2.2-.84 3.12-.84h.01c.92 0 2.02.34 3.12.84.7.32 1.36.71 1.95 1.15-.75 2.28-3.42 3.51-6.08 3.51z'/%3E%3C/svg%3E" alt="Ícone de comunidade">
+                        </div>
+                        <h3>Comunidade em Geral</h3>
+                        <p>Disseminamos conhecimento sobre o luto, quebrando tabus e promovendo uma cultura de acolhimento e compreensão em toda a sociedade.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="nossos-servicos">
+            <div class="container">
+                <h2>Nossos Serviços</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <img src="https://images.pexels.com/photos/23496505/pexels-photo-23496505.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Uma pessoa conversando com um terapeuta em um ambiente acolhedor.">
+                        <div class="service-card-content">
+                            <h3>Acolhimento Individual</h3>
+                            <p>Sessões personalizadas de terapia do luto, oferecendo suporte emocional e estratégias para lidar com a perda de forma saudável.</p>
+                            <a href="#contato" class="btn btn-secondary">Saiba mais</a>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <img src="https://images.pexels.com/photos/5711167/pexels-photo-5711167.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Um grupo diverso de pessoas sentadas em círculo, compartilhando experiências com empatia.">
+                        <div class="service-card-content">
+                            <h3>Grupos de Apoio</h3>
+                            <p>Encontros regulares em grupo, proporcionando um espaço de partilha, compreensão mútua e identificação entre pares enlutados.</p>
+                            <a href="#contato" class="btn btn-secondary">Saiba mais</a>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <img src="https://images.pexels.com/photos/5212340/pexels-photo-5212340.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Uma pessoa ensinando em uma sala de aula, com livros e anotações.">
+                        <div class="service-card-content">
+                            <h3>Educação para o Luto</h3>
+                            <p>Palestras, workshops e materiais educativos que desmistificam o luto e promovem uma cultura de cuidado e apoio.</p>
+                            <a href="#contato" class="btn btn-secondary">Saiba mais</a>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <img src="https://images.pexels.com/photos/15141493/pexels-photo-15141493.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Profissionais em um workshop, colaborando e aprendendo juntos.">
+                        <div class="service-card-content">
+                            <h3>Formação de Acolhedores</h3>
+                            <p>Programas de capacitação para profissionais e voluntários que desejam atuar no suporte a pessoas enlutadas.</p>
+                            <a href="#contato" class="btn btn-secondary">Saiba mais</a>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <img src="https://images.pexels.com/photos/6756358/pexels-photo-6756358.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Pessoa em momento de reflexão, com expressão calma mas séria, indicando momento de crise.">
+                        <div class="service-card-content">
+                            <h3>Intervenção em Crise</h3>
+                            <p>Apoio imediato em situações de luto agudo ou traumático, oferecendo primeiros socorros psicológicos e encaminhamento adequado.</p>
+                            <a href="#contato" class="btn btn-secondary">Saiba mais</a>
+                        </div>
+                    </div>
+                </div>
+                <p>Nossos serviços são desenhados para acolher sua dor, respeitar seu tempo e guiar você em cada etapa da travessia do luto.</p>
+            </div>
+        </section>
+
+        <section id="diferencial">
+            <div class="container">
+                <h2>Nosso Diferencial</h2>
+                <div class="differentiators-grid">
+                    <div class="differentiator-item">
+                        <h3>Formação Especializada</h3>
+                        <p>Equipe com capacitação aprofundada em tanatologia e terapia do luto.</p>
+                    </div>
+                    <div class="differentiator-item">
+                        <h3>Atuação Ética</h3>
+                        <p>Compromisso com a confidencialidade e o respeito à singularidade de cada processo.</p>
+                    </div>
+                    <div class="differentiator-item">
+                        <h3>Sensibilidade no Cuidado</h3>
+                        <p>Abordagem humana e empática, livre de julgamentos e positividade forçada.</p>
+                    </div>
+                    <div class="differentiator-item">
+                        <h3>Base Técnica Sólida</h3>
+                        <p>Metodologias e práticas fundamentadas em evidências científicas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="frase-institucional">
+            <div class="container">
+                <p>“O luto não precisa ser atravessado sozinho.”</p>
+            </div>
+        </section>
+
+        <section id="atuacao-goiania">
+            <div class="container">
+                <h2>Atuação em Goiânia – Goiás</h2>
+                <p>O Instituto Vidar tem raízes profundas em Goiânia, oferecendo atendimento presencial e construindo uma rede de apoio robusta na capital e em toda a região metropolitana. Nosso compromisso é com a comunidade local, compreendendo suas particularidades e necessidades.</p>
+                <p>Estamos abertos à construção de parcerias regionais com hospitais, escolas, empresas e outras instituições. Acreditamos no poder da colaboração para ampliar o alcance do acolhimento ao luto e desenvolver projetos significativos com instituições públicas e privadas, visando um impacto positivo duradouro na vida das pessoas em Goiás.</p>
+            </div>
+        </section>
+
+        <section id="contato">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                <div class="contact-info">
+                    <p>Ficaremos felizes em acolher você. Fale conosco:</p>
+                    <p><strong>Telefone: <a href="tel:+55629981601533">(62) 99816-01533</a></strong></p>
+                    <a href="https://wa.me/55629981601533" target="_blank" class="btn btn-whatsapp">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12.04 2C7.34 2 3.58 5.76 3.58 10.46C3.58 12.08 4.01 13.62 4.79 14.96L3.11 20.25L8.52 18.6C9.74 19.34 11.09 19.72 12.04 19.72C16.74 19.72 20.5 15.96 20.5 11.26C20.5 6.56 16.74 2 12.04 2ZM17.15 15.22C16.94 15.63 16.48 15.71 15.96 15.46C15.44 15.21 14.53 14.67 14.31 14.39C14.09 14.11 13.92 14.04 13.4 14.56C12.89 15.09 12.39 15.15 12.04 15.21C11.69 15.27 11.02 15.03 10.37 14.47C9.72 13.91 9.21 13.06 8.84 12.42C8.47 11.78 8.78 11.49 9.01 11.27C9.18 11.09 9.38 10.83 9.58 10.58C9.77 10.33 9.87 10.14 9.98 9.93C10.09 9.71 10.04 9.51 9.96 9.35C9.88 9.18 9.34 7.92 9.11 7.39C8.88 6.86 8.68 6.94 8.52 6.94C8.36 6.94 8.16 6.94 7.96 6.94C7.76 6.94 7.42 7.02 7.15 7.32C6.88 7.63 6.13 8.35 6.13 9.85C6.13 11.35 7.22 12.8 7.39 13.03C7.56 13.26 9.52 16.34 12.56 17.65C15.59 18.96 15.78 18.88 16.32 18.82C16.86 18.76 17.72 18.23 17.92 17.7C18.12 17.17 18.12 16.73 18.06 16.6C18 16.48 17.36 15.39 17.15 15.22Z"/>
+                        </svg>
+                        Conversar via WhatsApp
+                    </a>
+                </div>
+                <form class="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone (opcional)</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX">
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Descreva sua dúvida ou necessidade..."></textarea>
+                    </div>
+                    <button type="submit">Entrar em contato</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <svg class="footer-watermark" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M10 50 C30 20, 70 20, 90 50 C70 80, 30 80, 10 50 Z" fill="var(--color-sand-light)" opacity="0.1"/>
+        </svg>
+        <div class="container">
+            <a href="#hero" class="logo" aria-label="Instituto Vidar - Página Inicial">
+                <svg width="160" height="40" viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="footerLogoTitle footerLogoDesc">
+                    <title id="footerLogoTitle">Instituto Vidar</title>
+                    <desc id="footerLogoDesc">Logotipo do Instituto Vidar, com as palavras "Instituto Vidar" e um pequeno símbolo de folha estilizada.</desc>
+                    <text x="0" y="18" font-family="'Playfair Display', serif" font-weight="600" font-size="16" fill="var(--color-text-light)">INSTITUTO</text>
+                    <text x="0" y="36" font-family="'Playfair Display', serif" font-weight="600" font-size="22" fill="var(--color-text-light)">VIDAR</text>
+                    <path d="M100 20 C105 10, 115 10, 120 20 C125 30, 115 30, 110 20 Z" fill="var(--color-accent-lavender)" opacity="0.7"/>
+                    <path d="M102 23 C107 13, 117 13, 122 23 C127 33, 117 33, 112 23 Z" fill="var(--color-accent-blue)" opacity="0.7"/>
+                </svg>
+            </a>
+            <p>Instituto Vidar – Goiânia, Goiás</p>
+            <p>Contato: <a href="tel:+55629981601533">(62) 99816-01533</a></p>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#quem-somos">Sobre Nós</a></li>
+                    <li><a href="#nossos-servicos">Serviços</a></li>
+                    <li><a href="#contato">Fale Conosco</a></li>
+                    <li><a href="#">Política de Privacidade</a></li> <!-- Link placeholder -->
+                </ul>
+            </div>
+            <p>&copy; 2023 Instituto Vidar. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.getElementById('main-nav');
+            const navLinks = navMenu.querySelectorAll('a');
+
+            hamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                hamburger.classList.toggle('active');
+                const isExpanded = navMenu.classList.contains('active');
+                hamburger.setAttribute('aria-expanded', isExpanded);
+            });
+
+            // Fechar menu ao clicar em um link (para mobile)
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        hamburger.classList.remove('active');
+                        hamburger.setAttribute('aria-expanded', false);
+                    }
+                });
+            });
+
+            // Adicionar funcionalidade de scroll suave para links âncora
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+                        // Calcula a posição do elemento, considerando a altura do header fixo
+                        const headerOffset = document.querySelector('header').offsetHeight;
+                        const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                        const offsetPosition = elementPosition - headerOffset - 20; // -20px para um pequeno padding visual
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
